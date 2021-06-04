@@ -26,12 +26,13 @@ function weightCalc() {
     }
     if (mark.length == 0 || mark == 0) {
         mark = 0;
+        var percent = 0;
         document.getElementById("percent").innerHTML = "N/A";
     }
     else {
         var percent = (rmark / mark)*100;
         percent =parseFloat(percent).toFixed(2);
-        document.getElementById("percent").innerHTML = percent+"/100";
+        document.getElementById("percent").innerHTML = percent+"/100.00";
     }
 
     if (rmark1.length == 0) {
@@ -42,12 +43,13 @@ function weightCalc() {
     }
     if (mark1.length == 0 || mark1 == 0) {
         mark1 = 0;
+        var percent1 = 0;
         document.getElementById("percent1").innerHTML = "N/A";
     }
     else {
         var percent1 = (rmark1 / mark1)*100;
         percent1 =parseFloat(percent1).toFixed(2);
-        document.getElementById("percent1").innerHTML = percent1+"/100";
+        document.getElementById("percent1").innerHTML = percent1+"/100.00";
     }
     if (rmark2.length == 0) {
         rmark2 = 0;
@@ -57,12 +59,13 @@ function weightCalc() {
     }
     if (mark2.length == 0 || mark2 == 0) {
         mark2 = 0;
+        var percent2 = 0;
         document.getElementById("percent2").innerHTML = "N/A";
     }
     else {
         var percent2 = (rmark2 / mark2)*100;
         percent2 =parseFloat(percent2).toFixed(2);
-        document.getElementById("percent2").innerHTML = percent2+"/100";
+        document.getElementById("percent2").innerHTML = percent2+"/100.00";
     }
 
     if (rmark3.length ==0) {
@@ -73,18 +76,19 @@ function weightCalc() {
     }
     if (mark3.length == 0 || mark3 == 0) {
         mark3 = 0;
+        var percent3 = 0;
         document.getElementById("percent3").innerHTML = "N/A";
     }
     else {
         var percent3 = (rmark3 / mark3)*100;
         percent3 =parseFloat(percent3).toFixed(2);
-        document.getElementById("percent3").innerHTML = percent3+"/100";
+        document.getElementById("percent3").innerHTML = percent3+"/100.00";
     }
     var score = (percent*weight)+(percent1*weight1)+(percent2*weight2)+(percent3*weight3);
     var dist = + weight + +weight1 + +weight2 + +weight3;
     score = score/dist;
     score =parseFloat(score).toFixed(2);
-    document.getElementById("p2").innerHTML = "Your weighted score is: " + score + "/100"; 
+    document.getElementById("p2").innerHTML = "Your weighted score is: " + score + "/100.00"; 
     
 }
 
@@ -118,12 +122,13 @@ function meanCalc() {
     if (mark.length == 0 || mark == 0) {
         mark = 0;
         numOfAssignment--;
+        var percent = 0;
         document.getElementById("percent").innerHTML = "N/A";
     }
     else {
         var percent = (rmark / mark)*100;
         percent =parseFloat(percent).toFixed(2);
-        document.getElementById("percent").innerHTML = percent+"/100";
+        document.getElementById("percent").innerHTML = percent+"/100.00";
     }
 
     if (rmark1.length == 0) {
@@ -131,13 +136,14 @@ function meanCalc() {
     }
     if (mark1.length == 0|| mark1 == 0) {
         mark1 = 0;
+        var percent1 = 0;
         numOfAssignment--;
         document.getElementById("percent1").innerHTML = "N/A";
     }
     else {
         var percent1 = (rmark1 / mark1)*100;
         percent1 =parseFloat(percent1).toFixed(2);
-        document.getElementById("percent1").innerHTML = percent1+"/100";
+        document.getElementById("percent1").innerHTML = percent1+"/100.00";
     }
 
     if (rmark2.length == 0) {
@@ -146,12 +152,13 @@ function meanCalc() {
     if (mark2.length == 0 || mark2 == 0) {
         mark2 = 0;
         numOfAssignment--;
+        var percent2 = 0;
         document.getElementById("percent2").innerHTML = "N/A";
     }
     else {
         var percent2 = (rmark2 / mark2)*100;
         percent2 =parseFloat(percent2).toFixed(2);
-        document.getElementById("percent2").innerHTML = percent2+"/100";
+        document.getElementById("percent2").innerHTML = percent2+"/100.00";
     }
 
     if (rmark3.length == 0) {
@@ -160,16 +167,19 @@ function meanCalc() {
     if (mark3.length == 0 || mark3 == 0) {
         mark3 = 0;
         numOfAssignment--;
+        var percent3 = 0;
         document.getElementById("percent3").innerHTML = "N/A";
     }
     else {
         var percent3 = (rmark3 / mark3)*100;
         percent3 =parseFloat(percent3).toFixed(2);
-        document.getElementById("percent3").innerHTML = percent3+"/100";
+        document.getElementById("percent3").innerHTML = percent3+"/100.00";
     }
     var score = (+percent+ +percent1 + +percent2 + +percent3)/numOfAssignment;
     console.log(numOfAssignment, score);
     score =parseFloat(score).toFixed(2);
-    console.log(score);
-    document.getElementById("p2").innerHTML = "Your mean score is: " + score + "/100"; 
+    if(numOfAssignment == 0){
+        score = 0.00;
+    }
+    document.getElementById("p2").innerHTML = "Your mean score is: " + score + "/100.00"; 
 }

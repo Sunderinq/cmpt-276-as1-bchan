@@ -18,6 +18,7 @@
                 <div class="pink-box">
                     <h2>Activities</h2>
                     <h3>Give grades to the numeric activities:</h3>
+                    <form>
                     <table style="width:100%">
                         <tbody>
                             <tr>
@@ -31,16 +32,12 @@
                                 <th>Activity 1</th>
                                 <th>A1</th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="weight" name="weight">
-                                    </form>
+                                        <input type="number" min="0"  id="weight" name="weight">
                                 </th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="rmark" name="rmark">
+                                        <input type="number" min="0"  id="rmark" name="rmark">
                                         <p1> /</p1><br>
-                                        <input type="number" id="mark" name="mark">
-                                    </form>
+                                        <input type="number" min="0"  id="mark" name="mark">
                                 </th>
                                 <th>
                                     <p id="percent"></p>
@@ -50,16 +47,12 @@
                                 <th>Activity 2</th>
                                 <th>A2</th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="weight1" name="weight1">
-                                    </form>
+                                        <input type="number" min="0"  id="weight1" name="weight1">
                                 </th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="rmark1" name="rmark1">
+                                        <input type="number" min="0"  id="rmark1" name="rmark1">
                                         <p1> /</p1><br>
-                                        <input type="number" id="mark1" name="mark1">
-                                    </form>
+                                        <input type="number" min="0"  id="mark1" name="mark1">
                                 </th>
                                 <th>
                                     <p id="percent1"></p>
@@ -69,16 +62,12 @@
                                 <th>Activity 3</th>
                                 <th>A3</th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="weight2" name="weight2">
-                                    </form>
+                                        <input type="number" min="0"  id="weight2" name="weight2">
                                 </th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="rmark2" name="rmark2">
+                                        <input type="number" min="0"  id="rmark2" name="rmark2">
                                         <p1> /</p1><br>
-                                        <input type="number" id="mark2" name="mark2">
-                                    </form>
+                                        <input type="number" min="0"  id="mark2" name="mark2">
                                 </th>
                                 <th>
                                     <p id="percent2"></p>
@@ -88,16 +77,12 @@
                                 <th>Activity 4</th>
                                 <th>A4</th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="weight3" name="weight3">
-                                    </form>
+                                        <input type="number" min="0"  id="weight3" name="weight3">
                                 </th>
                                 <th>
-                                    <form>
-                                        <input type="number" id="rmark3" name="rmark3">
+                                        <input type="number" min="0"  id="rmark3" name="rmark3">
                                         <p1> /</p1><br>
-                                        <input type="number" id="mark3" name="mark3">
-                                    </form>
+                                        <input type="number" min="0"  id="mark3" name="mark3">
                                 </th>
                                 <th>
                                     <p id="percent3"></p>
@@ -110,6 +95,8 @@
                     </h2><br>
                     <input class="button" type="button" onclick="meanCalc()" value="MEAN">
                     <input class="button1" type="button" onclick="weightCalc()" value="WEIGHTED">
+                    <input class="reset" type="reset" value="RESET">
+                    </form>
                 </div>
             </div>
         </div>

@@ -84,6 +84,18 @@ table, tbody,th {
     bottom: 1rem;
     right: 6rem;
 }
+
+.reset{
+  position: absolute;
+  width: 75px;
+  background-color: #a5251c;
+  color: #FFFFFF;
+  outline-color: #a5251c;
+  border: none;
+  white-space: normal;
+  bottom: 2.5rem;
+  right: 1rem;
+}
   h1 {
     font-size: 2em;
     font-family: "Arial";
