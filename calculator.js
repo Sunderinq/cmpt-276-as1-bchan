@@ -26,8 +26,9 @@ function weightCalc() {
     }
     if (mark.length == 0 || mark == 0) {
         mark = 0;
+        weight = 0;
         var percent = 0;
-        document.getElementById("percent").innerHTML = "N/A";
+        document.getElementById("percent").innerHTML = "0/0";
     }
     else {
         var percent = (rmark / mark)*100;
@@ -44,7 +45,8 @@ function weightCalc() {
     if (mark1.length == 0 || mark1 == 0) {
         mark1 = 0;
         var percent1 = 0;
-        document.getElementById("percent1").innerHTML = "N/A";
+        weight1 = 0;
+        document.getElementById("percent1").innerHTML = "0/0";
     }
     else {
         var percent1 = (rmark1 / mark1)*100;
@@ -60,7 +62,8 @@ function weightCalc() {
     if (mark2.length == 0 || mark2 == 0) {
         mark2 = 0;
         var percent2 = 0;
-        document.getElementById("percent2").innerHTML = "N/A";
+        weight2 = 0;
+        document.getElementById("percent2").innerHTML = "0/0";
     }
     else {
         var percent2 = (rmark2 / mark2)*100;
@@ -77,7 +80,8 @@ function weightCalc() {
     if (mark3.length == 0 || mark3 == 0) {
         mark3 = 0;
         var percent3 = 0;
-        document.getElementById("percent3").innerHTML = "N/A";
+        weight3 = 0;
+        document.getElementById("percent3").innerHTML = "0/0";
     }
     else {
         var percent3 = (rmark3 / mark3)*100;
@@ -88,6 +92,9 @@ function weightCalc() {
     var dist = + weight + +weight1 + +weight2 + +weight3;
     score = score/dist;
     score =parseFloat(score).toFixed(1);
+    if(dist == 0){
+        score = 0;
+    }
     document.getElementById("p2").innerHTML = "Your weighted score is: " + score + "/100"; 
     
 }
@@ -123,7 +130,7 @@ function meanCalc() {
         mark = 0;
         numOfAssignment--;
         var percent = 0;
-        document.getElementById("percent").innerHTML = "N/A";
+        document.getElementById("percent").innerHTML = "0/0";
     }
     else {
         var percent = (rmark / mark)*100;
@@ -138,7 +145,7 @@ function meanCalc() {
         mark1 = 0;
         var percent1 = 0;
         numOfAssignment--;
-        document.getElementById("percent1").innerHTML = "N/A";
+        document.getElementById("percent1").innerHTML = "0/0";
     }
     else {
         var percent1 = (rmark1 / mark1)*100;
@@ -153,7 +160,7 @@ function meanCalc() {
         mark2 = 0;
         numOfAssignment--;
         var percent2 = 0;
-        document.getElementById("percent2").innerHTML = "N/A";
+        document.getElementById("percent2").innerHTML = "0/0";
     }
     else {
         var percent2 = (rmark2 / mark2)*100;
@@ -168,7 +175,7 @@ function meanCalc() {
         mark3 = 0;
         numOfAssignment--;
         var percent3 = 0;
-        document.getElementById("percent3").innerHTML = "N/A";
+        document.getElementById("percent3").innerHTML = "0/0";
     }
     else {
         var percent3 = (rmark3 / mark3)*100;
@@ -179,7 +186,7 @@ function meanCalc() {
     console.log(numOfAssignment, score);
     score =parseFloat(score).toFixed(1);
     if(numOfAssignment == 0){
-        score = 0.00;
+        score = 0;
     }
     document.getElementById("p2").innerHTML = "Your mean score is: " + score + "/100"; 
 }
