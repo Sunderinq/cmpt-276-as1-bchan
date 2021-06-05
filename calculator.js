@@ -19,13 +19,16 @@ function weightCalc() {
 
 
 
-    if (rmark.length == 0) {
+    if (rmark.length == 0|| rmark < 0) {
         rmark = 0;
     }
     if (weight.length == 0) {
         weight = 1;
     }
-    if (mark.length == 0 || mark == 0) {
+    if(weight< 0){
+        weight = 0;
+    }
+    if (mark.length == 0 || mark <= 0) {
         mark = 0;
         weight = 0;
         var percent = 0;
@@ -35,13 +38,16 @@ function weightCalc() {
         percent =parseFloat(percent).toFixed(1);
     }
 
-    if (rmark1.length == 0) {
+    if (rmark1.length == 0 || rmark1<0) {
         rmark1 = 0;
     }
     if (weight1.length==0) {
         weight1 = 1;
     }
-    if (mark1.length == 0 || mark1 == 0) {
+    if (weight1<0) {
+        weight1 = 0;
+    }
+    if (mark1.length == 0 || mark1 <= 0) {
         mark1 = 0;
         var percent1 = 0;
         weight1 = 0;
@@ -50,13 +56,16 @@ function weightCalc() {
         var percent1 = (rmark1 / mark1)*100;
         percent1 =parseFloat(percent1).toFixed(1);
     }
-    if (rmark2.length == 0) {
+    if (rmark2.length == 0 || rmark2 < 0) {
         rmark2 = 0;
     }
     if (weight2.length ==0) {
         weight2 = 1;
     }
-    if (mark2.length == 0 || mark2 == 0) {
+    if (weight2<0) {
+        weight2 = 0;
+    }
+    if (mark2.length == 0 || mark2 <= 0) {
         mark2 = 0;
         var percent2 = 0;
         weight2 = 0;
@@ -66,13 +75,16 @@ function weightCalc() {
         percent2 =parseFloat(percent2).toFixed(1);
     }
 
-    if (rmark3.length ==0) {
+    if (rmark3.length ==0 || rmark3 < 0) {
         rmark3 = 0;
     }
     if (weight3.length ==0) {
         weight3 = 1;
     }
-    if (mark3.length == 0 || mark3 == 0) {
+    if (weight3<0) {
+        weight3 = 0;
+    }
+    if (mark3.length == 0 || mark3 <= 0) {
         mark3 = 0;
         var percent3 = 0;
         weight3 = 0;
@@ -116,10 +128,10 @@ function meanCalc() {
     var rmark3 = document.getElementById("rmark3").value;
 
 
-    if (rmark.length == 0) {
+    if (rmark.length == 0 || rmark < 0) {
         rmark = 0;
     }
-    if (mark.length == 0 || mark == 0) {
+    if (mark.length == 0 || mark <= 0) {
         mark = 0;
         numOfAssignment--;
         var percent = 0;
@@ -129,10 +141,10 @@ function meanCalc() {
         percent =parseFloat(percent).toFixed(1);
     }
 
-    if (rmark1.length == 0) {
+    if (rmark1.length == 0||rmark1 < 0) {
         rmark1 = 0;
     }
-    if (mark1.length == 0|| mark1 == 0) {
+    if (mark1.length == 0|| mark1 <= 0) {
         mark1 = 0;
         var percent1 = 0;
         numOfAssignment--;
@@ -142,10 +154,10 @@ function meanCalc() {
         percent1 =parseFloat(percent1).toFixed(1);
     }
 
-    if (rmark2.length == 0) {
+    if (rmark2.length == 0 || rmark2 < 0) {
         rmark2 = 0;
     }
-    if (mark2.length == 0 || mark2 == 0) {
+    if (mark2.length == 0 || mark2 <= 0) {
         mark2 = 0;
         numOfAssignment--;
         var percent2 = 0;
@@ -155,10 +167,10 @@ function meanCalc() {
         percent2 =parseFloat(percent2).toFixed(1);
     }
 
-    if (rmark3.length == 0) {
+    if (rmark3.length == 0 || rmark3 < 0) {
         rmark3 = 0;
     }
-    if (mark3.length == 0 || mark3 == 0) {
+    if (mark3.length == 0 || mark3 <= 0) {
         mark3 = 0;
         numOfAssignment--;
         var percent3 = 0;
@@ -184,10 +196,10 @@ function calc(){
         document.getElementById("percent").innerHTML = "";
     }
     else{
-        if (rmark.length == 0) {
+        if (rmark.length == 0 || rmark <0) {
             rmark = 0;
         }
-        if (mark.length == 0 || mark == 0) {
+        if (mark.length == 0 || mark <= 0) {
             mark = 0;
             document.getElementById("percent").innerHTML = "0/0";
         }
@@ -207,10 +219,10 @@ function calc1(){
         document.getElementById("percent1").innerHTML = "";
     }
     else{
-        if (rmark.length == 0) {
+        if (rmark.length == 0 || rmark < 0) {
             rmark = 0;
         }
-        if (mark.length == 0 || mark == 0) {
+        if (mark.length == 0 || mark <= 0) {
             mark = 0;
             document.getElementById("percent1").innerHTML = "0/0";
         }
@@ -229,10 +241,10 @@ function calc2(){
         document.getElementById("percent2").innerHTML = "";
     }
     else{
-        if (rmark.length == 0) {
+        if (rmark.length == 0|| rmark < 0) {
             rmark = 0;
         }
-        if (mark.length == 0 || mark == 0) {
+        if (mark.length == 0 || mark <= 0) {
             mark = 0;
             document.getElementById("percent2").innerHTML = "0/0";
         }
@@ -253,10 +265,10 @@ function calc3(){
         document.getElementById("percent3").innerHTML = "";
     }
     else{
-        if (rmark.length == 0) {
+        if (rmark.length == 0||rmark<0) {
             rmark = 0;
         }
-        if (mark.length == 0 || mark == 0) {
+        if (mark.length == 0 || mark <= 0) {
             mark = 0;
             document.getElementById("percent3").innerHTML = "0/0";
         }
