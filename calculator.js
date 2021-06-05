@@ -197,17 +197,22 @@ function meanCalc() {
 function calc(){
     var mark = document.getElementById("mark").value;
     var rmark = document.getElementById("rmark").value;
-    if (rmark.length == 0) {
-        rmark = 0;
+    if(rmark.length == 0 && mark.length == 0){
+        document.getElementById("percent").innerHTML = "";
     }
-    if (mark.length == 0 || mark == 0) {
-        mark = 0;
-        document.getElementById("percent").innerHTML = "0/0";
-    }
-    else {
-        var percent = (rmark / mark)*100;
-        percent =parseFloat(percent).toFixed(1);
-        document.getElementById("percent").innerHTML = percent+"/100";
+    else{
+        if (rmark.length == 0) {
+            rmark = 0;
+        }
+        if (mark.length == 0 || mark == 0) {
+            mark = 0;
+            document.getElementById("percent").innerHTML = "0/0";
+        }
+        else {
+            var percent = (rmark / mark)*100;
+            percent =parseFloat(percent).toFixed(1);
+            document.getElementById("percent").innerHTML = percent+"/100";
+        }
     }
 }
 
@@ -215,34 +220,44 @@ function calc(){
 function calc1(){
     var mark = document.getElementById("mark1").value;
     var rmark = document.getElementById("rmark1").value;
-    if (rmark.length == 0) {
-        rmark = 0;
+    if(rmark.length == 0 && mark.length == 0){
+        document.getElementById("percent1").innerHTML = "";
     }
-    if (mark.length == 0 || mark == 0) {
-        mark = 0;
-        document.getElementById("percent1").innerHTML = "0/0";
-    }
-    else {
-        var percent = (rmark / mark)*100;
-        percent =parseFloat(percent).toFixed(1);
-        document.getElementById("percent1").innerHTML = percent+"/100";
+    else{
+        if (rmark.length == 0) {
+            rmark = 0;
+        }
+        if (mark.length == 0 || mark == 0) {
+            mark = 0;
+            document.getElementById("percent1").innerHTML = "0/0";
+        }
+        else {
+            var percent = (rmark / mark)*100;
+            percent =parseFloat(percent).toFixed(1);
+            document.getElementById("percent1").innerHTML = percent+"/100";
+        }
     }
 }
 
 function calc2(){
     var mark = document.getElementById("mark2").value;
     var rmark = document.getElementById("rmark2").value;
-    if (rmark.length == 0) {
-        rmark = 0;
+    if(rmark.length == 0 && mark.length == 0){
+        document.getElementById("percent2").innerHTML = "";
     }
-    if (mark.length == 0 || mark == 0) {
-        mark = 0;
-        document.getElementById("percent2").innerHTML = "0/0";
-    }
-    else {
-        var percent = (rmark / mark)*100;
-        percent =parseFloat(percent).toFixed(1);
-        document.getElementById("percent2").innerHTML = percent+"/100";
+    else{
+        if (rmark.length == 0) {
+            rmark = 0;
+        }
+        if (mark.length == 0 || mark == 0) {
+            mark = 0;
+            document.getElementById("percent2").innerHTML = "0/0";
+        }
+        else {
+            var percent = (rmark / mark)*100;
+            percent =parseFloat(percent).toFixed(1);
+            document.getElementById("percent2").innerHTML = percent+"/100";
+        }
     }
 }
 
@@ -251,16 +266,25 @@ function calc2(){
 function calc3(){
     var mark = document.getElementById("mark3").value;
     var rmark = document.getElementById("rmark3").value;
-    if (rmark.length == 0) {
-        rmark = 0;
+    if(rmark.length == 0 && mark.length == 0){
+        document.getElementById("percent3").innerHTML = "";
     }
-    if (mark.length == 0 || mark == 0) {
-        mark = 0;
-        document.getElementById("percent3").innerHTML = "0/0";
-    }
-    else {
-        var percent = (rmark / mark)*100;
-        percent =parseFloat(percent).toFixed(1);
-        document.getElementById("percent3").innerHTML = percent+"/100";
+    else{
+        if (rmark.length == 0) {
+            rmark = 0;
+        }
+        if (mark.length == 0 || mark == 0) {
+            mark = 0;
+            document.getElementById("percent3").innerHTML = "0/0";
+        }
+        else {
+            var percent = (rmark / mark)*100;
+            percent =parseFloat(percent).toFixed(1);
+            document.getElementById("percent3").innerHTML = percent+"/100";
+        }
     }
 }
+window.setInterval(calc, 10);
+window.setInterval(calc1, 10);
+window.setInterval(calc2, 10);
+window.setInterval(calc3, 10);
