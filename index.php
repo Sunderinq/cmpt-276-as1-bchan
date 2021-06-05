@@ -1,3 +1,3 @@
 <?php
-include_("calculator.html");
+include_once("calculator.html");
 ?>
