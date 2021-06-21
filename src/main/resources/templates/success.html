@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <ul>
+    <li><a class ="leftLi" th:href="@{/}">Home</a></li>
+    <li><a class ="leftLi" th:href="@{/about}">About</a></li>
+    <li style = "float:right"><a class ="rightLi" th:href="@{/box}">Add</a></li>
+  </ul>
+    Box Added Successfully!
+    <div class="container">
+        <h1>Database Output</h1>
+        <ul th:each="record : ${records}">
+            <li th:text="${record.getId()}"></li>
+            <li th:text="${record.getName()}"></li>
+            <li th:text="${record.getColor()}"></li>
+            <li th:text="${record.getWidth()}"></li>
+            <li th:text="${record.getHeight()}"></li>
+            <a th:href="@{/box/read/{pid}(pid=${record.getId()})}">view</a>
+        </ul>
+    </div>
+    <a th:href="@{/box}">add more box</a>
+</body>
+</html>

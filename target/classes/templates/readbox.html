@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about</title>
+</head>
+<body>
+  <ul>
+    <li><a class ="leftLi" th:href="@{/}">Home</a></li>
+    <li><a class ="leftLi" th:href="@{/about}">About</a></li>
+    <li style = "float:right"><a class ="rightLi" th:href="@{/box}">Add</a></li>
+  </ul>
+    Reading box <span th:text="${id}"></span>
+    <br>
+    <a th:href="@{/box/del/{pid}(pid=${id})}">delete</a>
+    <div style = "width:10px; height:10px; background-color:black;"></div>
+  </ul>
+</body>
+</html>
